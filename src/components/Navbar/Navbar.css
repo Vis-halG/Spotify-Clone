@@ -1,4 +1,4 @@
-/* General Navbar Styles */
+/* ====== General Navbar Styles ====== */
 .navbar {
     display: flex;
     align-items: center;
@@ -6,22 +6,22 @@
     background-color: black;
     padding: 10px 20px;
     color: white;
+    /* Fixed or relative positioning as needed */
     position: fixed;
     position: relative;
 }
-  
-/* Left Section */
+
+/* ====== Left Section: Logo ====== */
 .navbar-left {
     display: flex;
     align-items: center;
 }
-
 .logo {
     width: 40px;
     height: 40px;
 }
 
-/* Center Section */
+/* ====== Center Section: Search ====== */
 .navbar-center {
     flex: 1;
     display: flex;
@@ -32,9 +32,10 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin-left:150px;
+    margin-left: 150px;
 }
 
+/* Home icon style */
 .search-container .fa-house {
     background-color: #1f1f1f;
     padding: 10px;
@@ -42,6 +43,7 @@
     margin-right: 10px;
 }
 
+/* Search bar container */
 .search-bar {
     display: flex;
     align-items: center;
@@ -51,6 +53,7 @@
     width: 400px;
 }
 
+/* Search input */
 .search-bar input {
     background: transparent;
     border: none;
@@ -60,6 +63,7 @@
     padding: 5px;
 }
 
+/* Icon styles in search */
 .search-icon,
 .box-icon {
     color: white;
@@ -67,57 +71,60 @@
     margin-right: 5px;
 }
 
-/* ✅ Hide Hamburger Icon in Desktop View */
+/* ====== Desktop Only: Hide Unused Buttons ====== */
+/* Hide hamburger (mobile menu) and close button in desktop view */
 .hamburger,
 .close-btn {
-    display: none;  /* Hide in Desktop */
+    display: none;
 }
 
 .install-btn {
+    /* Placeholder for install button styling if needed */
+}
 
+.signup-btn {
+    padding: 0 25px 0 25px;
 }
-.signup-btn{
-    padding:0 25px 0 25px;
-}
+
 .login-btn {
     padding: 8px 20px;
     border-radius: 20px;
     font-weight: bold;
     background-color: white;
     color: #1f1f1f;
-}   
-/* ✅ Mobile Full-Screen Slide-in Menu */
+}
+
+/* ====== Responsive: Mobile View Styles ====== */
 @media screen and (max-width: 968px) {
     .navbar {
-        padding: 10px;
+        padding: 10px; /* Less padding on mobile */
     }
     .search-container {
-        margin-left:0px;
+        margin-left: 0px; /* No left margin on mobile */
     }
-    
-    /* Hide Some Icons */
+
+    /* Hide icons on mobile */
     .fa-house, .fa-firefox {
         display: none;
     }
-
-    /* Adjust Search Bar */
+    /* Smaller search bar on mobile */
     .search-bar {
         width: 220px;
         font-size: 0.7rem;
     }
 
-    /* ✅ Show Hamburger Icon Only in Mobile */
+    /* Show hamburger icon in mobile */
     .hamburger {
         display: block;
         font-size: 24px;
         cursor: pointer;
     }
 
-    /* Full-Screen Mobile Menu */
+    /* ====== Mobile Menu Overlay (Full Screen) ====== */
     .mobile-menu {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: -100%; /* Hidden offscreen */
         width: 100%;
         height: 100vh;
         background: black;
@@ -129,11 +136,12 @@
         z-index: 100;
     }
 
-    /* Open Menu (Slide-in Animation) */
+    /* Slide-in effect for open menu */
     .mobile-menu.open {
         right: 0;
     }
 
+    /* Mobile menu buttons */
     .mobile-menu button {
         background: transparent;
         border: none;
@@ -143,6 +151,7 @@
         cursor: pointer;
     }
 
+    /* Login button style override for mobile */
     .login-btn {
         background: white;
         color: black;
@@ -151,7 +160,7 @@
         font-weight: bold;
     }
 
-    /* Close Button */
+    /* Show close button in mobile menu */
     .close-btn {
         display: block;
         position: absolute;
