@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
+  // Mobile menu state
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      {/* Left Section */}
+      {/* Logo */}
       <div className="navbar-left">
         <img
           src="https://open.spotifycdn.com/cdn/images/icons/Spotify_256.17e41e58.png"
@@ -15,10 +16,10 @@ const Navbar = () => {
         />
       </div>
 
-      {/* Center Section */}
+      {/* Search and navigation */}
       <div className="navbar-center">
         <div className="search-container">
-          <div><i className="fa-solid fa-house"></i></div> {/* Home Icon */}
+          <div><i className="fa-solid fa-house"></i></div>
           <div className="search-bar">
             <span className="search-icon"><i className="fa-solid fa-magnifying-glass"></i></span>
             <input type="text" placeholder="What do you want to play?" />
@@ -27,7 +28,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Right Section (Full-Screen Menu in Mobile) */}
+      {/* Mobile menu overlay */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={() => setMenuOpen(false)}>
           <i className="fa-solid fa-xmark"></i>
@@ -37,11 +38,10 @@ const Navbar = () => {
         <button className="login-btn">Log in</button>
       </div>
 
-      {/* Hamburger Menu (Only for Mobile) */}
+      {/* Menu icon for mobile */}
       <div className="hamburger" onClick={() => setMenuOpen(true)}>
         <i className="fa-solid fa-bars"></i>
       </div>
-      
     </nav>
   );
 };
