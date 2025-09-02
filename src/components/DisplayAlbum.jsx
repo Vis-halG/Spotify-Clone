@@ -5,15 +5,16 @@ import { albumsData, assets, songsData } from '../assets/assets';
 import { PlayerContext } from '../context/PlayerContext';
 
 const DisplayAlbum = () => {
-
-    const { id } = useParams();
-    const albumData = albumsData[id];
-    const { playWithId } = useContext(PlayerContext);
-
+    const { id } = useParams(); // Get album ID from URL params
+    const albumData = albumsData[id]; // Get album details by ID
+    const { playWithId } = useContext(PlayerContext); // Get play function from context
 
     return (
         <>
+            {/* Navbar at the top */}
             <Navbar />
+            
+            {/* Album header info: image, title, description, likes, song count, duration */}
             <div className='mt-10 flex gap-8 flex-col md:flex-row md:items-end'>
                 <img className='w-48 rounded' src={albumData.image} alt="" />
                 <div className='flex flex-col '>
@@ -28,8 +29,9 @@ const DisplayAlbum = () => {
                         about 4 hrs 38 min
                     </p>
                 </div>
-
             </div>
+            
+            {/* Table header for song list */}
             <div className='grid grid-cols-3 sm:grid-cols-4 mt-10 mb-4 pl-2 text-[#a7a7a7]'>
                 <p><b className='mr-4 '>#</b>Title</p>
                 <p>Album</p>
@@ -37,22 +39,11 @@ const DisplayAlbum = () => {
                 <img className='m-auto w-4' src={assets.clock_icon} alt="" />
             </div>
             <hr />
+
+            {/* List of songs in the album */}
             {
                 songsData.map((item, index) => (
-                    <div onClick={() => playWithId(item.id)} key={index} className='grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 items-center text-[#a7a7a7] hover:bg-[#ffffff2b] cursor-pointer' >
-                        <p className='text-white'>
-                            <b className='mr-4 text-[#a7a7a7]'>{index + 1}</b>
-                            <img className='inline w-10 mr-5' src={item.image} alt="" />
-                            {item.name}
-                        </p>
-                        <p className='text-[15px]'>{albumData.name}</p>
-                        <p className='text-[15px] hidden sm:block'>1 month ago</p>
-                        <p className='text-[15px] text-center'>{item.duration}</p>
-                    </div>
-                ))
-            }
-        </>
-    )
-}
-
-export default DisplayAlbum
+                    <div
+                      onClick={() => playWithId(item.id)} // Play song on click
+                      key={index}
+                      className='grid
