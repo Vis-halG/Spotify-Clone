@@ -4,6 +4,8 @@ import { albumsData, songsData } from '../assets/assets'
 import AlbumItem from './AlbumItem'
 import SongItem from './SongItem'
 
+
+// Define the DisplayHome functional component
 const DisplayHome = () => {
   return (
     <>
