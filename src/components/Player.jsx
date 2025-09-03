@@ -10,7 +10,7 @@ const Player = () => {
            playStatus,     // Boolean indicating if music is currently playing
            play,      // Function to start playback
            pause,      // Function to pause playback
-           time,
+           time,      // Object with current and total playback times
            previous,
            next, 
            seekSong 
