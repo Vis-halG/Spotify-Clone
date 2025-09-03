@@ -13,7 +13,7 @@ const Player = () => {
            time,      // Object with current and total playback times
            previous,    // Function to go to previous track
            next,     // Function to go to next track
-           seekSong 
+           seekSong      // Function to seek to a position when progress bar 
           } = useContext(PlayerContext);
 
     return (
