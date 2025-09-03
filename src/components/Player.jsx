@@ -6,7 +6,7 @@ const Player = () => {
  // Destructure all required player state and functions from the context
     const { track,     // Currently playing track's information (name, desc, image)
            seekBar,     // Ref to the seek bar (progress indicator)
-           seekBg, 
+           seekBg,      // Ref to the seek background (clickable area)
            playStatus, 
            play,
            pause,
