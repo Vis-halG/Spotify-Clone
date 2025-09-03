@@ -4,7 +4,7 @@ import { PlayerContext } from '../context/PlayerContext'
 
 const Player = () => {
  // Destructure all required player state and functions from the context
-    const { track,
+    const { track,     // Currently playing track's information (name, desc, image)
            seekBar,
            seekBg, 
            playStatus, 
