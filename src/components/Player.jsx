@@ -3,8 +3,18 @@ import { assets } from '../assets/assets'
 import { PlayerContext } from '../context/PlayerContext'
 
 const Player = () => {
-
-    const { track, seekBar, seekBg, playStatus, play, pause, time, previous, next, seekSong } = useContext(PlayerContext);
+ // Destructure all required player state and functions from the context
+    const { track,
+           seekBar,
+           seekBg, 
+           playStatus, 
+           play,
+           pause,
+           time,
+           previous,
+           next, 
+           seekSong 
+          } = useContext(PlayerContext);
 
     return (
         <div className='h-[10%] bg-black flex justify-between items-center text-white px-4 fixed bottom-0 w-full '>
