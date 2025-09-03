@@ -8,7 +8,7 @@ const Player = () => {
            seekBar,     // Ref to the seek bar (progress indicator)
            seekBg,      // Ref to the seek background (clickable area)
            playStatus,     // Boolean indicating if music is currently playing
-           play,
+           play,      // Function to start playback
            pause,
            time,
            previous,
