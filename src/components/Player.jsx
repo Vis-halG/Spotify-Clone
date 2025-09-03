@@ -11,7 +11,7 @@ const Player = () => {
            play,      // Function to start playback
            pause,      // Function to pause playback
            time,      // Object with current and total playback times
-           previous,
+           previous,    // Function to go to previous track
            next, 
            seekSong 
           } = useContext(PlayerContext);
