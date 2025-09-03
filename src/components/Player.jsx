@@ -7,7 +7,7 @@ const Player = () => {
     const { track,     // Currently playing track's information (name, desc, image)
            seekBar,     // Ref to the seek bar (progress indicator)
            seekBg,      // Ref to the seek background (clickable area)
-           playStatus, 
+           playStatus,     // Boolean indicating if music is currently playing
            play,
            pause,
            time,
