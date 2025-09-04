@@ -2,14 +2,21 @@ import React, { useContext } from 'react'
 import { PlayerContext } from '../context/PlayerContext'
 
 const SongItem = ({ name, image, desc, id }) => {
-// Access playWithId function from PlayerContext (to play a song by ID)
+
+  // Access playWithId function from PlayerContext (to play a song by ID)
   const { playWithId } = useContext(PlayerContext)
 
   return (
     // Each song card → plays song on click
     <div onClick={() => playWithId(id)} className='min-w-[180px] p-2 px-3 rounded cursor-pointer hover:bg-[#ffffff26]'>
-      <img className='rounded' src={image} alt="" />
+      
+      {/* Song Image */}
+      <img className='rounded' src={image} alt="Song Thumbnail" />
+      
+      {/* Song Name */}
       <p className='font-bold mt-2 mb-1'>{name}</p>
+      
+      {/* Song Description */}
       <p className='text-slate-200 text-sm'>{desc}</p>
     </div>
   )
