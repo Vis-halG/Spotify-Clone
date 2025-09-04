@@ -14,7 +14,7 @@ const navigate = useNavigate();
    
       {/* Top Section: Home & Search */}
       <div className='bg-[#121212] h-[15%] rounded flex flex-col justify-around'>
-
+ {/* Home Button → navigates to "/" */}
         <div onClick={()=> navigate('/')} className='flex items-center gap-3 pl-8 cursor-pointer'>
           <img className='w-6' src={assets.home_icon} alt="" />
           <p className='font-bold'>Home</p>
