@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { PlayerContext } from '../context/PlayerContext'
 
 const SongItem = ({ name, image, desc, id }) => {
-
+// Access playWithId function from PlayerContext (to play a song by ID)
   const { playWithId } = useContext(PlayerContext)
 
   return (
