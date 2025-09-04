@@ -8,6 +8,8 @@ const Sidebar = () => {
 const navigate = useNavigate();
 
   return (
+     // Sidebar wrapper (only visible on large screens, hidden on smaller ones)
+  
     <div className='w-[25%] h-full p-2 flex-col gap-2 text-white hidden lg:flex'>
       <div className='bg-[#121212] h-[15%] rounded flex flex-col justify-around'>
 
