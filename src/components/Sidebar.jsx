@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Sidebar = () => {
 
+  // React Router hook for navigation
 const navigate = useNavigate();
 
   return (
