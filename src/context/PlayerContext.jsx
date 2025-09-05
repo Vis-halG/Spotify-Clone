@@ -10,6 +10,7 @@ const PlayerContextProvider = (props) => {
     const seekBg = useRef();
     const seekBar = useRef();
 
+     // Current track info
     const [track, setTrack] = useState(songsData[0]);
     const [playStatus, setPlayStatus] = useState(false);
     const [time, setTime] = useState({
