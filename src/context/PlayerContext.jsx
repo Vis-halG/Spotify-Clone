@@ -1,6 +1,7 @@
 import { createContext, useEffect, useRef, useState } from "react";
 import { songsData } from "../assets/assets";
 
+// Create a new context to share player state and controls
 export const PlayerContext = createContext();
 
 const PlayerContextProvider = (props) => {
