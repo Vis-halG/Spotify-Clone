@@ -63,7 +63,7 @@ const PlayerContextProvider = (props) => {
 
     useEffect(() => {
         setTimeout(() => {
-
+// Update currentTime and totalTime continuously
             audioRef.current.ontimeupdate = () => {
                 seekBar.current.style.width = (Math.floor(audioRef.current.currentTime / audioRef.current.duration * 100)) + "%";
                 setTime({
