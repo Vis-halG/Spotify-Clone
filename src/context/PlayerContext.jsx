@@ -5,6 +5,7 @@ import { songsData } from "../assets/assets";
 export const PlayerContext = createContext();
 
 const PlayerContextProvider = (props) => {
+     // Refs for audio element, seek background, and seek progress bar
     const audioRef = useRef();
     const seekBg = useRef();
     const seekBar = useRef();
