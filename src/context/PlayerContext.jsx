@@ -80,7 +80,7 @@ const PlayerContextProvider = (props) => {
 
         }, 1000);
     }, [audioRef])
-
+// Values & functions shared with the rest of the app
     const contextValue = {
         audioRef,
         seekBg,
